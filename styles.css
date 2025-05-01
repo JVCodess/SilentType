@@ -1,0 +1,293 @@
+/* General Body and Font Settings */
+body {
+    font-family: 'Lato', sans-serif; /* Body font */
+    margin: 0;
+    padding: 0;
+    background-color: #262626; /* Background color */
+    color: #f7f7f7; /* Text color */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+
+    /* Navbar Styles & Unorder List Styles */
+    nav {
+      position: fixed;           /* Fixed position */
+      top: 0;                    /* Align to the top */
+      left: 0;                   /* Align to the left */
+      height: 100%;              /* Full height of the screen */
+      width: 250px;              /* Set the width of the sidebar */
+      background-color: #262626; /* Background color for nav */
+      color: #f7f7f7;            /* Text color for nav */
+      padding-top: 20px;         /* Padding at the top */
+      padding-left: 20px;        /* Padding on the left */
+      z-index: 1000;             /* Ensure it's on top */
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    }
+
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+  nav ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 20px; /* Space between items */
+  }
+  
+  nav ul li a {
+    text-decoration: none;   /* Remove underline */
+    color: #f7f7f7;          /* Default text color */
+    font-size: 18px;         /* Font size for links */
+    font-weight: 700;        /* Bold font for links */
+    font-family: 'Lato', sans-serif; /* Use Lato for nav items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  nav ul li a:hover {
+    color: #d9C1A1; /* Hover color */
+  }
+  
+  
+  /* Content Section (for smooth scrolling, main section styling) */
+  section {
+    margin-left: 270px; /* Offset content to make room for fixed nav */
+    padding: 40px;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #d9C1A1; /* Heading color */
+    font-family: 'Orbitron', sans-serif; /* Orbitron for headings */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Large heading size */
+    font-weight: 800; /* Bold font */
+  }
+  
+  h2, h3, h4 {
+    font-size: 2rem; /* Slightly smaller for other headings */
+  }
+  
+  
+  /* Content Section (for smooth scrolling, main section styling) */
+  section {
+    margin-left: 270px; /* Offset content to make room for fixed nav */
+    padding: 40px;
+    min-height: 100vh;
+  }
+
+  
+/* Content Section - inside hero section */ 
+  .highlight-grid {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    
+  }
+  
+  .highlight-item {
+    width: 400px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  
+  /* Lift effect on hover to highlight the item */
+  .highlight-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .highlight-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .highlight-text {
+    padding: 20px;
+    color: #f7f7f7;
+  }
+  
+  .highlight-text h3 {
+    color: #d9C1A1;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .highlight-text p {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+  }
+
+  /* About Section Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.about-item {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+}
+
+.about-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text {
+  padding: 20px;
+  color: #f7f7f7;
+}
+
+.about-text h3 {
+  color: #d9C1A1;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+}
+
+
+  /* Shop Section Styles */
+  #shop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 products in a row */
+    gap: 20px; /* Spacing between products */
+    padding: 40px;
+  }
+  
+  #shop .product {
+    background-color: #333; /* Background for product cards */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #shop img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
+  /* Contact Form Styles */
+  #contact {
+    padding: 40px;
+    background-color: #333;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact input,
+  #contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #d9C1A1;
+    background-color: #444;
+    color: #f7f7f7;
+    font-size: 1rem;
+  }
+  
+  #contact input:focus,
+  #contact textarea:focus {
+    outline: none;
+    border-color: #d9C1A1;
+  }
+  
+  #contact button {
+    padding: 10px 20px;
+    background-color: #d9C1A1;
+    color: #262626;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #contact button:hover {
+    background-color: #b08d7e;
+  }
+  
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #262626;
+    color: #f7f7f7;
+    font-size: 1rem;
+  }
+  
+  footer a {
+    color: #d9C1A1;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Error input styles */
+.error {
+  border: 2px solid #ff4d4d; 
+  background-color: #ffebeb;   
+}
+
+/* Success message style */
+#form-messages p {
+  color: green;
+  font-weight: bold;
+}
+
+  
+  
+  /* Responsive Layout at 1280px */
+  @media (max-width: 1280px) {
+    nav {
+      width: 200px; /* Adjust the nav width for smaller screens */
+    }
+
+    section {
+      margin-left: 220px; /* Adjust content margin */
+    }
+  
+    #shop {
+      grid-template-columns: 1fr 1fr; /* Display 2 products per row */
+    }
+  
+    #contact {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  

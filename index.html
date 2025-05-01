@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+  SilentType Website Head Section
+  Includes: 
+    - Charset and viewport settings for responsiveness
+    - Page title
+    - Google Fonts: Orbitron (headings) & Lato (body text)
+    - External stylesheet link (styles.css)
+    - External JavaScript file (script.js) loaded with 'defer' to prevent blocking
+    - Meta Tags
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SilentType offers high-quality, ultra-quiet linear keyboards for gaming, programming, and professional use. Purchase your ideal keyboard with us!">
+  <meta name="keywords" content="linear keyboards, linear switches, quiet keyboards, gaming keyboards, SilentType">
+  <meta name="author" content="Joshua Valera">
+  <title>SilentType Keyboards</title>
+
+  <!-- Typography: Orbitron & Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Defer JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Fixed Vertical|Left Navigation -->
+  <nav>
+    <div>
+      <h1>SilentType</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#about">📄 About</a></li>
+      <li><a href="#shop">🛒 Shop</a></li>
+      <li><a href="#contact">✉️ Contact</a></li>
+    </ul>
+    <button id="mode-toggle">Light/Dark Mode</button>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Welcome to SilentType</h2>
+        <p>Quiet, Smooth, and Professional. Discover keyboards with linear switches!</p>
+        <button class="shop-button" onclick="window.location.href='#shop'">Shop Now</button>
+
+        <!-- Feature Content Box (Inside Hero) -->
+        <div class="highlight-grid">
+        <div class="highlight-item">            
+        <div class="highlight-text">
+          <h3>SilentType Pro</h3>
+          <p>Engineered for coders and gamers who demand silence and precision.</p>
+        </div>
+          <img src="images/keyboard3.png" class="highlight-img" alt="product3">
+        </div> 
+        <div class="highlight-item">
+        <div class="highlight-text">
+          <h3>Nightwave</h3>
+          <p>Custom lighting meets ultra-quiet switches for a professional look day or night.</p>
+        </div>
+          <img src="images/keyboard2.png" class="highlight-img" alt="product2">
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About SilentType</h2>
+      <p>SilentType is dedicated to building high-performance, ultra-quiet mechanical keyboards with linear switches that elevate productivity and style.</p>
+      <p>Each model is crafted with precision and designed for silence. Whether you're coding, gaming, or typing your next masterpiece, SilentType gives you the edge—quietly.</p>
+
+    <!-- Feature Grid insid about Section -->
+    <div class="about-grid">
+    <div class="about-item">
+    <div class="about-text">
+      <h3>Silent by Design</h3>
+      <p>Every keystroke is engineered for minimal noise—ideal for late-night work, shared offices, and focused environments.</p>
+    </div>
+    </div>
+
+    <div class="about-item">
+      <div class="about-text">
+      <h3>Built for Gaming</h3>
+      <p>Zero distractions. Smooth linear switches give you precision without the click-clack—because performance shouldn't be loud.</p>
+      </div>
+    </div>
+
+    <div class="about-item">
+      <div class="about-text">
+      <h3>Streamlined Productivity</h3>
+      <p>Our keyboards pair minimal design with maximum impact, so your workspace stays calm and focused.</p>
+      </div>
+    </div>
+
+    <div class="about-item">
+      <div class="about-text">
+      <h3>Coding Made Comfortable</h3>
+      <p>SilentType keyboards reduce fatigue, improve flow, and let developers code for hours without strain or sound.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+    <!-- Shop Section (Cost Calculator) -->
+    <section id="shop">
+      <h2>Our Keyboards</h2>
+      <div class="product-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="images/keyboard1.png" alt="product1">
+          <h3>SilentType Base</h3>
+          <p>Perfect entry-level mechanical keyboard with silent switches.</p>
+          <p class="price">$89.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="images/keyboard3.png" alt="product2">
+          <h3>SilentType Pro</h3>
+          <p>Aluminum case, USB-C, hot-swappable silent tactile switches.</p>
+          <p class="price">$129.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="images/keyboard2.png" alt="product3">
+          <h3>SilentType Nightwave</h3>
+          <p>RGB lighting and full key remapping for advanced users.</p>
+          <p class="price">$159.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+        <h3>Cart Summary</h3>
+        <ul id="cart-items"></ul>
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Tax (8%): $<span id="tax">0.00</span></p>
+        <p>Shipping: $<span id="shipping">0.00</span></p>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+        <button id="checkout">Checkout</button>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Need help? We'd love to hear from you.</p>
+
+      <form id="contact-form">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone">
+
+        <p>Preferred Contact Method *</p>
+        <label><input type="radio" name="contactMethod" value="email" required> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone" required> Phone</label>
+
+        <label for="comments">Comments *</label>
+        <textarea id="comments" name="comments" required></textarea>
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required>  
+
+        <button type="submit">Send Message</button>
+        <div id="form-messages"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 SilentType | Joshua Valera</p>
+  </footer>
+</body>
+</html>
